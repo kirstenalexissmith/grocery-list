@@ -3,6 +3,11 @@ function handleForm(event) {
   const userSelections = document.querySelectorAll("input[name=grocery-item]:checked");
   const userSelectionsArray = Array.from(userSelections);
 
+  const refresh = document.getElementById("refresh");
+  refresh.addEventListener("click", function () {
+    location.reload();
+  })
+
   const resultsHeading = document.createElement("h2");
   resultsHeading.append("You need these items from the grocery store:");
   document.body.append(resultsHeading);
